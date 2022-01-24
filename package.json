@@ -1,0 +1,15 @@
+{
+  "name": "eleventy-tententherapy",
+  "version": "1.0.0",
+  "description": "TenTenTherapy built with Eleventy",
+  "main": "index.html",
+  "scripts": {
+    "dev": "eleventy --serve"
+  },
+  "keywords": ["eleventy", "11ty", "blog"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  }
+}
