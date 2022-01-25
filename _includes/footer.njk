@@ -1,0 +1,48 @@
+<div class="footer-banner">
+  <div class="inner-footer-banner">
+    <p>
+    Our approach to therapy incorporates treatment modalities which 
+    focus on collaborating with each client to achieve their goals, establish overall 
+    needs and respectfully address their concerns.
+    </p>
+    {% include 'buttons.njk' %}
+  </div>
+</div>
+
+<footer>
+  <div class="inner-footer container">
+    <div class="footer-about">
+      <img src="/img/footer-logo.svg" alt="TenTenTherapy Footer Logo" class="footer-logo">
+      <p>TenTenTherapy is a therapy and consulting company servicing the Greater St. Louis area.</p>
+    </div>
+    <div class="footer-navigation">
+      <h4>Menu</h4>
+      <nav aria-labelledby="footermenu">
+        <ul id="footermenu" class="footermenu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-services">
+      <h4>Our Services</h4>
+      <ul>
+      {% for service in servicesList.services %}
+        <li>{{ service.title }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="payment-methods">
+      <h4>Accepted Payments</h4>
+      <img src="/img/payments.svg" alt="Payment Methods" class="payment-methods">
+    </div>
+  </div>
+</footer>
+
+<div class="copyright">
+  <div class="inner-copyright container">
+    <p>&copy; {% currentYear %} TenTenTherapy. All rights reserved.</p>
+  </div>
+</div>

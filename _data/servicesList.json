@@ -1,0 +1,29 @@
+{
+  "services": [
+    {
+      "title": "Prolonged Exposure Therapy Sessions",
+      "description": "Prolonged Exposure therapy has been found to be the Post Traumatic Stress Disorder treatment with the most robust research and empirical support for trauma treatment efficacy (McLean & Foa, 2011). The use worldwide of PE therapy for PTSD over the last three decades has demonstrated its treatment efficacy and results that show how PE therapy continues to make and maintain considerable gains over time (Powers, Halpern, Ferenschak, Gillihan & Foa, 2010).",
+      "image": "prolongued-exposure.jpg"
+    },
+    {
+      "title": "Integrative Behavioral Couples Therapy Sessions",
+      "description": "Dr. Andrew Christensen and the late Dr. Neil S. Jacobson developed Integrative Behavioral Couples Therapy (IBCT). IBCT works by focusing on the causes of relational distress, to help couples understand and be more accepting of each other’s differences, improve interactions and enhance positive aspects of the relationship.",
+      "image": "couples-therapy.jpg"
+    },
+    {
+      "title": "Workshops",
+      "description": "Dr. Andrew Christensen and the late Dr. Neil S. Jacobson developed Integrative Behavioral Couples Therapy (IBCT). IBCT works by focusing on the causes of relational distress, to help couples understand and be more accepting of each other’s differences, improve interactions and enhance positive aspects of the relationship.",
+      "image": "workshops.jpg"
+    },
+    {
+      "title": "Integrative Behavioral Couples Therapy Supervision",
+      "description": "Prolonged Exposure Therapist Certification requires mental health providers to be under the supervision of a PE consultant while completing a minimum of two full PE cases. Supervision is offered to Mental Health Professionals who have completed the training and are seeking PE therapy certification.",
+      "image": "behavioral-therapy.jpg"
+    },
+    {
+      "title": "LCSW clinical Supervision in Missouri",
+      "description": "The state of Missouri requires all LCSW candidates to be under the supervision of a Qualified LCSW Supervisor and log 3,000 clinical experience hours within two to four years. Clinical Supervision can be provided through an online platform or face to face (depending on location).",
+      "image": "supervision.jpg"
+    }
+  ]
+}
