@@ -10,6 +10,10 @@
   --body-font-family: 'Lato', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--body-font-family);
   font-size: 16px;
@@ -58,7 +62,7 @@ header.main-header {
 .logo img {
   width: 200px;
   height: auto;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 ul.mainmenu {
@@ -70,6 +74,12 @@ ul.mainmenu {
   font-family: var(--header-font-family);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 850px) {
+  ul.mainmenu {
+    display: none;
+  }
 }
 
 ul.mainmenu li a {
@@ -110,7 +120,7 @@ ul.mainmenu li:hover a {
 }
 
 .main-hero h1 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 4vw, 4rem);
 }
 
 .about-hero {
@@ -145,9 +155,24 @@ ul.mainmenu li:hover a {
   margin-bottom: 3rem;
 }
 
+.hide-on-desktop {
+  display: none;
+}
+
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+}
+
+@media screen and (max-width: 445px) {
+  .hero-content {
+    text-align: center;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 a.primary-button, a.secondary-button {
@@ -155,9 +180,10 @@ a.primary-button, a.secondary-button {
   padding: 0.75rem 3rem;
   border-radius: 2rem;
   text-decoration: none;
-  font-size: 1.15rem;
   color: var(--light-gray);
   border: 2px solid var(--light-gray);
+  white-space: nowrap;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 a.primary-button {
@@ -185,6 +211,7 @@ a.secondary-button:hover {
 }
 
 .service {
+  width: 100%;
   display: grid;
   grid-template-rows: 150px 1fr;
 }
@@ -205,6 +232,31 @@ a.secondary-button:hover {
   font-weight: 400;
   text-align: center;
   margin: 0.5rem 0;
+}
+
+
+@media screen and (max-width: 1250px) {
+  .home-services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .home-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .home-services {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer-banner {
@@ -249,6 +301,18 @@ footer {
   gap: 1rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 1035px) {
+  .inner-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .inner-footer {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer-about p {
