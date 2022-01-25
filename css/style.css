@@ -289,3 +289,24 @@ footer {
   background-color: var(--secondary-color);
   color: var(--light-gray);
 }
+
+.seals {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 2rem;
+}
+
+.seal {
+  width: 100%;
+  height: 7rem;
+}
+
+.seal img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  mix-blend-mode: multiply;
+}
