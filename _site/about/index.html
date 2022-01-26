@@ -24,7 +24,7 @@
         <img src="/img/TenTenTherapy-Header-Logo.svg" alt="TenTenTherapy Logo">
       </a>
     </div>
-    <nav aria-labelledby="mainmenu">
+    <nav class="menu" aria-label="Main menu">
   <ul id="mainmenu" class="mainmenu">
     <li><a href="/" >Home</a></li>
     <li><a href="/about"  aria-current="page" >About</a></li>
@@ -32,6 +32,13 @@
     <li><a href="/contact" >Contact Us</a></li>
   </ul>
 </nav>
+
+<button class="menu-toggle" aria-label="Menu toggle button" aria-controls="primary-menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
   </div>
 </header>
   <div class="about-hero">
@@ -61,7 +68,7 @@
   <div class="seal"><img src="/img/seal-of-alabama.png" alt="Seal of Alabama"></div>
 </div>
   <div class="footer-banner">
-  <div class="inner-footer-banner">
+  <div class="container">
     <p>
     Our approach to therapy incorporates treatment modalities which 
     focus on collaborating with each client to achieve their goals, establish overall 
@@ -82,7 +89,7 @@
     </div>
     <div class="footer-navigation">
       <h4>Menu</h4>
-      <nav aria-labelledby="footermenu">
+      <nav aria-label="Main menu">
         <ul id="footermenu" class="footermenu">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
@@ -120,10 +127,6 @@
   </div>
 </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js"></script>
-<script>
-window.addEventListener('load', () => {
-  quicklink.listen();
-});
-</script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

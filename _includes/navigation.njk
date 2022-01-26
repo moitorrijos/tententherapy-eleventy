@@ -1,4 +1,4 @@
-<nav aria-labelledby="mainmenu">
+<nav class="menu" aria-label="Main menu">
   <ul id="mainmenu" class="mainmenu">
     <li><a href="/" {% if page.url == "/" %} aria-current="page" {% endif %}>Home</a></li>
     <li><a href="/about" {% if page.url == "/about/" %} aria-current="page" {% endif %}>About</a></li>
@@ -6,3 +6,10 @@
     <li><a href="/contact" {% if page.url == '/contact/' %} aria-current="page" {% endif %}>Contact Us</a></li>
   </ul>
 </nav>
+
+<button class="menu-toggle" aria-label="Menu toggle button" aria-controls="primary-menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>

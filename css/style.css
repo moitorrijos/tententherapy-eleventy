@@ -50,6 +50,12 @@ img {
 
 header.main-header {
   background-color: var(--primary-color);
+  position: relative;
+  z-index: 2;
+}
+
+ul {
+  margin-left: 1rem;
 }
 
 .logo-navigation {
@@ -60,9 +66,16 @@ header.main-header {
 }
 
 .logo img {
-  width: 200px;
+  width: 180px;
   height: auto;
   padding: 2rem 0;
+}
+
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
 }
 
 ul.mainmenu {
@@ -72,21 +85,99 @@ ul.mainmenu {
   margin: 0;
   padding: 0;
   font-family: var(--header-font-family);
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-@media screen and (max-width: 850px) {
+button.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 30px;
+  position: relative;
+  background-color: transparent;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  transform: rotate(0deg);
+  transition: all .15s ease-in-out;
+  cursor: pointer;
+}
+
+button.menu-toggle span {
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 4px;
+  background-color: var(--light-gray);
+  position: absolute;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+button.menu-toggle span:nth-child(1) {
+  top: 0;
+}
+
+button.menu-toggle span:nth-child(2), button.menu-toggle span:nth-child(3) {
+  top: 12px;
+}
+
+button.menu-toggle span:nth-child(4) {
+  top: 24px;
+}
+
+button.menu-toggle.open span:nth-child(1),
+button.menu-toggle.open span:nth-child(4) {
+  top: 12px;
+  width: 0;
+  left: 50%;
+}
+
+button.menu-toggle.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+button.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 865px) {
   ul.mainmenu {
-    display: none;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    border-bottom: 8px solid var(--secondary-color);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: all 0.15s ease-in-out;
   }
+  button.menu-toggle {
+    display: block;
+  }
+  ul.mainmenu.visible-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+ul.mainmenu li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 ul.mainmenu li a {
   color: var(--light-gray);
   text-decoration: none;
-  padding: 2rem;
   display: block;
+  padding: 34px 2rem;
 }
 
 ul.mainmenu li:hover a {
@@ -106,8 +197,22 @@ ul.mainmenu li:hover a {
   margin-right: auto;
 }
 
+@media screen and (max-width: 1200px) {
+  .container {
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 505px ) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .main-hero {
   background-image: url("../img/st-louis-therapy.jpg");
+  background-color: var(--secondary-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -123,12 +228,22 @@ ul.mainmenu li:hover a {
   font-size: clamp(3rem, 4vw, 4rem);
 }
 
+.main-hero h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
 .about-hero {
   background-color: var(--light-gray);
   background-image: radial-gradient(var(--light-gray), var(--medium-gray));
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 1065px) {
+  .about-hero {
+    overflow-x: hidden;
+  }
 }
 
 .about-hero .hero-content {
@@ -139,8 +254,24 @@ ul.mainmenu li:hover a {
 
 .hero-content-image {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-template-columns: 50ch 1fr;
+}
+
+@media screen and (max-width: 865px) {
+  .about-hero .hero-content-image {
+    margin-top: 4rem;
+    display: block;
+    text-align: center;
+  }
+
+  .about-hero .hero-image, .about-hero .hero-content {
+    margin: auto;
+  }
+
+  .about-hero .hero-image img {
+    width: 100%;
+  }
+
 }
 
 .hero-content {
@@ -223,6 +354,7 @@ a.secondary-button:hover {
 
 .service-image img {
   height: 120%;
+  width: auto;
   object-fit: cover;
   object-position: center center;
 }
@@ -261,6 +393,7 @@ a.secondary-button:hover {
 
 .footer-banner {
   background-image: url("../img/footer-banner.jpg");
+  background-color: var(--secondary-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -297,10 +430,18 @@ footer {
 
 .inner-footer {
   display: grid;
-  grid-template-columns: 250px 200px 1fr auto;
-  gap: 1rem;
+  grid-template-columns: 250px 120px 1fr auto;
+  gap: 2rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.footer-about {
+  max-width: 250px;
+}
+
+.footer-navigation {
+  max-width: 200px;
 }
 
 @media screen and (max-width: 1035px) {
@@ -326,7 +467,6 @@ footer {
 }
 
 .inner-footer ul {
-  list-style-position: inside;
   padding-left: 0;
 }
 
@@ -357,14 +497,15 @@ footer {
 .seals {
   margin-top: 4rem;
   margin-bottom: 4rem;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .seal {
-  width: 100%;
-  height: 7rem;
+  width: auto;
+  height: 6rem;
 }
 
 .seal img {
