@@ -5,22 +5,22 @@ layout: mainLayout
 <div class="main-hero">
   <div class="container">
     <div class="hero-content">
-      <h1>Therapeutic & Consulting Services</h1>
-      <h2>Greater St. Louis Area</h2>
+      <h1>{{ about.slogan }}</h1>
+      <h2>{{ about.slogan2 }}</h2>
       {% include 'buttons.njk' %}
     </div>
   </div>
 </div>
 
 <div class="home-services container">
-  {% for service in servicesList.services %}
-    <div class="service">
+  {% for service in servicesList %}
+    <a href="/services#{{ service.slug }}" class="service">
       <div class="service-image">
         <img src="/img/{{ service.image }}" alt="{{ service.title }}">
       </div>
       <div class="service-content">
         <h3>{{ service.title }}</h3>
       </div>
-    </div>
+    </a>
   {% endfor %}
 </div>

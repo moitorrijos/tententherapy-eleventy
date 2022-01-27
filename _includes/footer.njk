@@ -29,8 +29,12 @@
     <div class="footer-services">
       <h4>Our Services</h4>
       <ul>
-      {% for service in servicesList.services %}
-        <li>{{ service.title }}</li>
+      {% for service in servicesList %}
+        <li>
+          <a href="/services#{{ service.slug }}">
+            {{ service.title }}
+          </a>
+        </li>
       {% endfor %}
       </ul>
     </div>

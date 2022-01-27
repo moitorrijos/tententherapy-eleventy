@@ -1,0 +1,29 @@
+---
+layout: mainLayout
+title: Our Services | TenTenTherapy
+---
+
+<div class="services-hero">
+  <div class="container">
+    <div class="services-inner-hero">
+      <h1>{{ about.slogan }}</h1>
+      <p>{{ about.slogan3 }}</p>
+      {% include 'buttons.njk' %}
+    </div>
+  </div>
+</div>
+
+<div class="services-content container">
+  {% for service in servicesList %}
+    <div class="service-item" id="{{ service.slug }}">
+      <div class="service-item-image">
+        <img src="/img/{{ service.image }}" alt="{{ service.title }}">
+      </div>
+      <div class="service-item-content">
+        <h2>{{ service.title }}</h2>
+        <p>{{ service.description }}</p>
+        <a href="/contact">Book an appointment today &raquo;</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

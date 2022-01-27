@@ -5,12 +5,9 @@ title: Dr. Kimberly Barragan LCSW, DSW | TenTenTherapy
 <div class="about-hero">
   <div class="container hero-content-image">
     <div class="hero-content">
-      <h1>Dr. Kimberly Barragan LCSW, DSW</h1>
+      <h1>{{ about.name }}</h1>
       <p>
-        Is a certified prolonged exposure therapist, supervisor and trainer by the
-        Center for the Treatment and Study of Anxiety (CTSA) at the
-        University of Pennsylvania and Integrative Behavioral
-        Couples Therapist.
+        {{ about.description }}
       </p>
     </div>
     <div class="hero-image">
@@ -27,4 +24,8 @@ title: Dr. Kimberly Barragan LCSW, DSW | TenTenTherapy
   <div class="seal"><img src="/img/abcsw-logo.png" alt="American Board of Clinical Social Work"></div>
   <div class="seal"><img src="/img/seal-of-missouri.png" alt="Seal of Missouri"></div>
   <div class="seal"><img src="/img/seal-of-alabama.png" alt="Seal of Alabama"></div>
+</div>
+
+<div class="container about">
+  {% include 'about-text.html' %}
 </div>

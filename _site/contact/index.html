@@ -41,7 +41,37 @@
 </button>
   </div>
 </header>
-  <h1>Contact Us</h1>
+  <div class="container contact-us">
+  <div class="contact-us-form">
+    <h1>Contact Us</h1>
+    <p>For enquiries please email us using the form bellow</p>
+    <form action="/contact" method="post">
+      <label for="your-name">
+        Your name
+        <input type="text" name="your-name" id="your-name" required>
+      </label>
+      <label for="your-email">
+        Your email
+        <input type="email" name="your-email" id="your-email" required>
+      </label>
+      <label for="your-phone">
+        Your phone number
+        <input type="tel" name="your-phone" id="your-phone" required>
+      </label>
+      <label for="your-message">
+        Your message
+        <textarea name="your-message" id="your-message" rows="10" required></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <aside>
+    <div class="about-aside">
+      <h4>Dr Kimberly Barragan LCSW, DSW</h4>
+      <p>Is a certified prolonged exposure therapist, supervisor and trainer by the Center for the Treatment and Study of Anxiety (CTSA) at the University of Pennsylvania and Integrative Behavioral Couples Therapist.</p>
+    </div>
+  </aside>
+</div>
   <div class="footer-banner">
   <div class="container">
     <p>
@@ -77,15 +107,35 @@
       <h4>Our Services</h4>
       <ul>
       
-        <li>Prolonged Exposure Therapy Sessions</li>
+        <li>
+          <a href="/services#prolonged-exposure-therapy-sessions">
+            Prolonged Exposure Therapy Sessions
+          </a>
+        </li>
       
-        <li>Integrative Behavioral Couples Therapy Sessions</li>
+        <li>
+          <a href="/services#integrative-behavioral-couples-therapy-sessions">
+            Integrative Behavioral Couples Therapy Sessions
+          </a>
+        </li>
       
-        <li>Workshops</li>
+        <li>
+          <a href="/services#workshops">
+            Workshops
+          </a>
+        </li>
       
-        <li>Integrative Behavioral Couples Therapy Supervision</li>
+        <li>
+          <a href="/services#integrative-behavioral-couples-therapy-supervision">
+            Integrative Behavioral Couples Therapy Supervision
+          </a>
+        </li>
       
-        <li>LCSW clinical Supervision in Missouri</li>
+        <li>
+          <a href="/services#lcsw-clinical-supervision-missouri">
+            LCSW clinical Supervision in Missouri
+          </a>
+        </li>
       
       </ul>
     </div>
