@@ -1,0 +1,36 @@
+.services-hero {
+  background-image: url("../img/services-hero-image.jpg");
+  background-color: $light-secondary-color;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $light-gray;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-content {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.service-item {
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+
+    &:nth-child(even) .service-item-content {
+      order: -1;
+    }
+  }
+}
+
+.service-item-image img {
+  border-radius: 1rem;
+}

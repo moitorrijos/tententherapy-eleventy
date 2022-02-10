@@ -1,0 +1,15 @@
+$primary-color: #A1181D;
+$dark-primary-color: darken($primary-color, 10%);
+$light-primary-color: lighten($primary-color, 10%);
+$secondary-color: #15191B;
+$light-secondary-color: lighten($secondary-color, 10%);
+$light-gray: #F4F1F2;
+$medium-gray: #BFBFBF;
+$dark-gray: #2E3438;
+$header-font-family: 'Josefin Sans', sans-serif;
+$body-font-family: 'Lato', sans-serif;
+
+%hover-effect {
+  transform: scale(1.01) translateY(-2px);
+  box-shadow: rgba(10, 31, 68, 0.06) 0px 32px 80px, rgba(50, 50, 71, 0.05) 0px 32px 48px;
+}

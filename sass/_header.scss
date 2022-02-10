@@ -1,0 +1,80 @@
+header.main-header {
+  background-color: $primary-color;
+  position: relative;
+  z-index: 2;
+  border-top: 8px solid $dark-primary-color;
+}
+
+.logo-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $light-gray;
+}
+
+.logo img {
+  width: 220px;
+  height: auto;
+  padding: 2rem 0;
+}
+
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+ul.mainmenu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: $header-font-family;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a {
+      color: $light-gray;
+      text-decoration: none;
+      display: block;
+      padding: 34px 2rem;
+      transition: all 0.15s ease-in-out;
+    }
+
+    &:hover a {
+      background: $dark-primary-color;
+    }
+
+    [aria-current="page"] {
+      background-color: $dark-primary-color;
+    }
+  }
+
+  @media screen and (max-width: 865px) {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    border-bottom: 8px solid var(--secondary-color);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: all 0.15s ease-in-out;
+
+    &.visible-menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+}

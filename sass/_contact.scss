@@ -1,0 +1,42 @@
+.contact-us {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contact-us-form {
+  max-width: 600px;
+  flex-grow: 1;
+
+  form {
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.5rem 1rem;
+      margin-top: 4px;
+      border: 1px solid $medium-gray;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    button {
+      padding: 0.75rem 3rem;
+      border-radius: 2rem;
+      border: 1px solid $secondary-color;
+      background-color: $primary-color;
+      color: $light-gray;
+      cursor: pointer;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      appearance: none;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        @extend %hover-effect;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.main-hero {
+  background-image: url("../img/st-louis-therapy.jpg");
+  background-color: $secondary-color;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 0.75rem solid $secondary-color;
+  color: $light-gray;
+
+  h1 {
+    font-size: clamp(3rem, 4vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+}
+
+.home-services {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $dark-gray;
+    transition: all 0.25s ease-in-out;
+
+    .service-image {
+      border-radius: 0.5rem;
+      transition: all 0.25s ease-out;
+
+      img {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .service-content {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &:hover {
+      .service-image {
+        @extend %hover-effect;
+      }
+    }
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 780px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

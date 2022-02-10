@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./sass/");
   eleventyConfig.on("beforeBuild", () => {
     let result = sass.renderSync({
-      file: "sass/main.sass",
+      file: "sass/main.scss",
       sourceMap: false,
       outputStyle: "compressed",
     });

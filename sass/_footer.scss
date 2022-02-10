@@ -1,0 +1,119 @@
+.footer-banner {
+  background-image: url("../img/footer-banner.jpg");
+  background-color: $secondary-color;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 0.5rem solid $secondary-color;
+
+  p {
+    max-width: 60ch;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: $light-gray;
+    font-size: 1.2rem;
+    margin-top: 6rem;
+  }
+
+  .buttons {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    justify-content: center;
+  }
+}
+
+footer {
+  background-color: $light-secondary-color;
+  color: $light-gray;
+  border-top: 0.5rem solid $light-primary-color;
+}
+
+.inner-footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @media screen and (min-width: 960px) {
+    display: grid;
+    grid-template-columns: 280px auto auto;
+    gap: 2rem;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: $medium-gray;
+    font-style: italic;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+
+    a {
+      color: $light-gray;
+      text-decoration: none;
+      display: block;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 0;
+      transition: all 0.15s ease-in-out;
+    }
+  
+    a:hover {
+      transform: translateX(8px);
+    }
+  }
+
+  img.payment-methods {
+    width: 90%;
+    max-width: 300px;
+    margin-top: 2rem;
+  }
+}
+
+.footer-about {
+  max-width: 250px;
+
+  @media screen and (max-width: 1035px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 505px) {
+    grid-template-columns: 1fr;
+  }
+
+  p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: $secondary-color;
+  color: $light-gray;
+
+  p {
+    margin: 1rem auto;
+    opacity: 0.7;
+  }
+}
