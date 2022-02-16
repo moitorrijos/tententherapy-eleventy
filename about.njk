@@ -2,29 +2,9 @@
 layout: mainLayout
 title: Dr. Kimberly Barragan LCSW, DSW | TenTenTherapy
 ---
-<div class="about-hero">
-  <div class="container hero-content-image">
-    <div class="hero-content">
-      <h1>{{ about.name }}</h1>
-      <p>
-        {{ about.description }}
-      </p>
-    </div>
-    <div class="hero-image">
-      <img src="/img/dr-kimberly-barragan.png" alt="Dr. Kimberly Barragan LCSW, DSW">
-    </div>
-  </div>
-</div>
+{% include 'about-hero.njk' %}
 
-<div class="container seals">
-  <div class="seal"><img src="/img/capella-university.png" alt="Capella University Seal"></div>
-  <div class="seal"><img src="/img/university-of-missouri.png" alt="University of Missouri Seal"></div>
-  <div class="seal"><img src="/img/tarleton-state-university.png" alt="Tarleton State University Seal"></div>
-  <div class="seal"><img src="/img/msu-logo.png" alt="Missouri State University Seal"></div>
-  <div class="seal"><img src="/img/abcsw-logo.png" alt="American Board of Clinical Social Work"></div>
-  <div class="seal"><img src="/img/seal-of-missouri.png" alt="Seal of Missouri"></div>
-  <div class="seal"><img src="/img/seal-of-alabama.png" alt="Seal of Alabama"></div>
-</div>
+{% include 'about-seals.html' %}
 
 <div class="container about">
   {% include 'about-text.html' %}

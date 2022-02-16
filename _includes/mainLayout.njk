@@ -18,7 +18,7 @@ title: TenTenTherapy
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
   <title>{{ title }}</title>
 </head>
-<body>
+<body class="page-{{ page.fileSlug or 'home' }}">
   {% include 'header.njk' %}
   {{ content | safe }}
   {% include 'footer.njk' %}

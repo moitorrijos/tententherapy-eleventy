@@ -21,8 +21,8 @@
 }
 
 .home-services {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   text-align: center;
 
   a {
@@ -63,7 +63,7 @@
   @media screen and (min-width: 780px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 3rem;
   }
 
   @media screen and (min-width: 960px) {
