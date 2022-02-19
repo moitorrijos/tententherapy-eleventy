@@ -36,12 +36,18 @@ button.menu-toggle {
   }
 
   &.open {
-    span:nth-child(1), span:nth-child(4) {
-      transform: rotate(45deg);
-    }
-
-    span:nth-child(3) {
-      transform: rotate(-45deg);
+    span {
+      &:nth-child(1), &:nth-child(4) {
+        opacity: 0;
+      }
+      
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+  
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
     }
   }
 

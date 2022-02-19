@@ -64,8 +64,8 @@ ul.mainmenu {
     width: 100%;
     top: 100%;
     left: 0;
-    background-color: var(--primary-color);
-    border-bottom: 8px solid var(--secondary-color);
+    background-color: $primary-color;
+    border-bottom: 8px solid $secondary-color;
     pointer-events: none;
     opacity: 0;
     transform: translateY(-8px);
