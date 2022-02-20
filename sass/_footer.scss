@@ -38,6 +38,9 @@ footer {
 .inner-footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
   @media screen and (min-width: 960px) {
     display: grid;
@@ -79,6 +82,10 @@ footer {
     width: 90%;
     max-width: 280px;
     margin-top: 2rem;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   .payment-methods p {

@@ -1,7 +1,10 @@
+$button_width: 30px;
+$button_height: 20px;
+
 button.menu-toggle {
   display: none;
-  width: 40px;
-  height: 30px;
+  width: $button_width;
+  height: $button_height;
   position: relative;
   background-color: transparent;
   appearance: none;
@@ -13,9 +16,9 @@ button.menu-toggle {
 
   span {
     display: block;
-    width: 40px;
-    height: 3px;
-    border-radius: 4px;
+    width: $button_width;
+    height: $button_height/10;
+    border-radius: $button_width/10;
     background-color: $light-gray;
     position: absolute;
     left: 0;
@@ -27,11 +30,11 @@ button.menu-toggle {
     }
 
     &:nth-child(2), &:nth-child(3) {
-      top: 12px;
+      top: $button_height/2 - $button_height/10/2;
     }
 
     &:nth-child(4) {
-      top: 24px;
+      bottom: 0;
     }
   }
 
@@ -40,7 +43,7 @@ button.menu-toggle {
       &:nth-child(1), &:nth-child(4) {
         opacity: 0;
       }
-      
+
       &:nth-child(2) {
         transform: rotate(45deg);
       }

@@ -1,0 +1,72 @@
+.phone-picker.phone-picker.phone-picker {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  .int-phone-chooser {
+    width: 10%;
+    min-width: 80px;
+    position: relative;
+    height: auto;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  
+    .flag-picker {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      background: $light-gray;
+      gap: 10px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      img {
+        width: 20px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        &.down-arrow {
+          width: 14px;
+        }
+      }
+    }
+  
+    ul.country-code {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background: $light-gray;
+      white-space: nowrap;
+      max-height: 210px;
+      overflow-y: scroll;
+      box-shadow: rgba(10, 31, 68, 0.06) 0px 32px 80px, rgba(50, 50, 71, 0.05) 0px 32px 48px, rgba(50, 50, 71, 0.2) 0 10px 24px;
+      li {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+        padding: 0.5rem;
+        img {
+          width: 20px;
+          height: auto;
+          padding: 0;
+          margin: 0;
+          display: inline-block;
+        }
+        span {
+          color: lighten($dark-gray, 20%);
+        }
+      }
+
+      display: none;
+    }
+  }
+  input {
+    width: 90%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0;
+  }
+}

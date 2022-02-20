@@ -46,23 +46,54 @@
     <p>
       Dr. Barragan can provide you with therapeutic and consulting services in English
       and Spanish, please contact us for further information using the form below.
+      Please provide all your information so that we can contact you.
     </p>
     <form action="/contact" method="post">
       <label for="your-name">
         Your name
-        <input type="text" name="your-name" id="your-name" required>
+        <input
+          type="text"
+          name="your-name"
+          id="your-name"
+          placeholder="Please type your full name."
+          required
+        >
       </label>
       <label for="your-email">
         Your email
-        <input type="email" name="your-email" id="your-email" required>
+        <input
+          type="email"
+          name="your-email"
+          id="your-email"
+          placeholder="Your email"
+          required
+        >
       </label>
       <label for="your-phone">
         Your phone number
-        <input type="tel" name="your-phone" id="your-phone" required>
+        <div class="phone-picker">
+          <div class="int-phone-chooser">
+            <div class="flag-picker">
+              <img src="https://cdn.kcak11.com/CountryFlags/countries/us.svg" alt="United States">
+              <span>+1</span>
+            </div>
+          </div>
+          <input 
+            type="tel"
+            name="your-phone"
+            id="your-phone"
+            placeholder="(123) 456-7890"
+          >
+        </div>
       </label>
       <label for="your-message">
         Your message
-        <textarea name="your-message" id="your-message" rows="10" required></textarea>
+        <textarea
+          name="your-message"
+          id="your-message" 
+          rows="10"
+          placeholder="Please type any information regarding your needs."
+          required></textarea>
       </label>
       <button type="submit">Submit</button>
     </form>
@@ -71,9 +102,9 @@
   <div class="footer-banner">
   <div class="container">
     <p>
-    Our approach to therapy incorporates treatment modalities which 
-    focus on collaborating with each client to achieve their goals, establish overall 
-    needs and respectfully address their concerns.
+      Our approach to therapy incorporates treatment modalities which 
+      focus on collaborating with each client to achieve their goals, establish overall 
+      needs and respectfully address their concerns.
     </p>
     <div class="buttons">
   <a href="/contact" class="primary-button">Book Today</a>
