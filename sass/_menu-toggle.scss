@@ -17,8 +17,8 @@ button.menu-toggle {
   span {
     display: block;
     width: $button_width;
-    height: $button_height/10;
-    border-radius: $button_width/10;
+    height: calc($button_height/10);
+    border-radius: calc($button_width/10);
     background-color: $light-gray;
     position: absolute;
     left: 0;
@@ -30,7 +30,7 @@ button.menu-toggle {
     }
 
     &:nth-child(2), &:nth-child(3) {
-      top: $button_height/2 - $button_height/10/2;
+      top: calc($button_height/2 - $button_height/10/2);
     }
 
     &:nth-child(4) {
