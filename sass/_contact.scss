@@ -14,12 +14,19 @@
     }
 
     input, textarea {
-      padding: 0.5rem 1rem;
       margin-top: 4px;
       border: 1px solid $medium-gray;
       border-radius: 4px;
       width: 100%;
       font-size: 0.9rem;
+    }
+    
+    input {
+      padding: 0.5rem 1rem;
+    }
+
+    textarea {
+      padding: 1rem;
     }
 
     button {
