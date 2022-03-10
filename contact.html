@@ -10,7 +10,11 @@ title: Contact us | TenTenTherapy
       and Spanish, please contact us for further information using the form below.
       Please provide all your information so that we can contact you.
     </p>
-    <form name="contact" method="post" data-netlify="true">
+    <form
+      name="contact"
+      data-netlify="true"
+      data-netlify-recaptcha="true"
+    >
       <label for="your-name">
         Your name
         <input
@@ -66,6 +70,7 @@ title: Contact us | TenTenTherapy
         How many months have you been speaking English?
         <input type="text" name="months" id="months">
       </label>
+      <div data-netlify-recaptcha="true"></div>
       <button type="submit">Submit</button>
     </form>
   </div>
