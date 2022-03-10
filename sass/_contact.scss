@@ -11,6 +11,10 @@
     label {
       display: block;
       margin-bottom: 1rem;
+      
+      &.important-input {
+        display: none;
+      }
     }
 
     input, textarea {

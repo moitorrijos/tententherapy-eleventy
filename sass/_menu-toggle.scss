@@ -17,6 +17,7 @@ button.menu-toggle {
 
   span {
     display: block;
+    pointer-events: none;
     width: $button_width;
     height: calc($button_height/10);
     border-radius: calc($button_width/10);

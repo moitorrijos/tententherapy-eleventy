@@ -10,7 +10,7 @@ title: Contact us | TenTenTherapy
       and Spanish, please contact us for further information using the form below.
       Please provide all your information so that we can contact you.
     </p>
-    <form action="/contact" method="post">
+    <form action="/contact" method="post" id="contact-form">
       <label for="your-name">
         Your name
         <input
@@ -57,6 +57,14 @@ title: Contact us | TenTenTherapy
           placeholder="Please type any information regarding your needs."
           required
         ></textarea>
+      </label>
+      <label for="years" class="important-input">
+        How many years have you been speaking English?
+        <input type="text" name="years" id="years">
+      </label>
+      <label for="months" class="important-input">
+        How many months have you been speaking English?
+        <input type="text" name="months" id="months">
       </label>
       <button type="submit">Submit</button>
     </form>
