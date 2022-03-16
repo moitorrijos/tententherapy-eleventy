@@ -22,7 +22,15 @@ title: Our Services | TenTenTherapy
       <div class="service-item-content">
         <h2>{{ service.title }}</h2>
         <p>{{ service.description }}</p>
-        <a href="/contact">Book an appointment today &raquo;</a>
+        
+        <a href="/contact">
+          {% if (service.slug === 'workshops') %}
+            Go to upcoming workshop
+          {% else %}
+            Book an appointment today
+          {% endif %}
+            &raquo;
+        </a>
       </div>
     </div>
   {% endfor %}
