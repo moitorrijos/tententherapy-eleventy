@@ -17,6 +17,15 @@ title: TenTenTherapy
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
   <title>{{ title }}</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ0Q3ET42B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQ0Q3ET42B');
+  </script>
 </head>
 <body class="page-{{ page.fileSlug or 'home' }}">
   {% include 'header.njk' %}
