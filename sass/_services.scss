@@ -1,14 +1,6 @@
 .services-hero {
+  @extend %page-hero;
   background-image: url("../img/services-hero-image.jpg");
-  background-color: $light-secondary-color;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: $light-gray;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .services-content {
