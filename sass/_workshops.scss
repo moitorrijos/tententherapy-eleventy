@@ -15,15 +15,37 @@
   }
 }
 
-.workshop-content, .whorpshops-content {
+.workshops-content {
   padding-top: 6rem;
   padding-bottom: 6rem;
-}
-
-.whorpshops-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 3rem;
+  gap: 2rem;
+}
+
+.workshop-content-sidebar {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+}
+
+.workshop-content {
+  max-width: 70ch;
+
+  p {
+    width: 100%;
+  }
+
+  ul {
+    margin-left: 0;
+    padding-left: 1rem;
+    li {
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .workshop-card {
@@ -44,7 +66,7 @@
 }
 
 .workshop-card-content {
-  padding: 2rem 4vw;
+  padding: 2rem 3rem;
   padding-bottom: 4rem;
 }
 
@@ -59,5 +81,8 @@
   margin-bottom: 2rem;
   td {
     vertical-align: top;
+  }
+  td.align-center {
+    vertical-align: middle;
   }
 }
