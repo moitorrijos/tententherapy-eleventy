@@ -1,0 +1,16 @@
+[
+  {
+    "workshop_id": "1",
+    "workshop_name": "Intensive Workshop in Prolonged Exposure Therapy for Posttraumatic Stress Disorder (PTSD) at Casa de Salud",
+    "workshop_description": "Provide mental health professionals with an intensive Prolonged Exposure workshop to gain the skills and knowledge on how to utilize Prolonged Exposure Therapy to treat trauma survivors within their respective practices, organizations and community.",
+    "workshop_slug": "intensive-workshop-in-prolonged-exposure-therapy-for-posttraumatic-stress-disorder-ptsd-at-casa-de-salud",
+    "workshop_image": "/img/casa-salud.jpg",
+    "workshop_price": "850",
+    "workshop_duration": "1 hour",
+    "workshop_location": "St. Louis Missouri, Casa de Salud",
+    "workshop_start_date": "Monday September 19, 2022",
+    "workshop_end_date": "Thursday, September 22, 2022",
+    "workshop_start_time": "8:30am - 4:30pm Monday - Wednesday",
+    "workshop_end_time": "8:30am to 3:00pm Thursday"
+  }
+]

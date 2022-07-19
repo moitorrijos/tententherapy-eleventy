@@ -1,0 +1,72 @@
+---
+layout: mainLayout
+title: Upcoming Workshops and Events | TenTenTherapy
+---
+
+<div class="workshops-hero">
+  <div class="container">
+    <div class="workshops-inner-hero">
+      <h1>Upcoming Workshops</h1>
+      <p>{{ about.description }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="workshops-content container">
+  {% for workshop in workshops %}
+    <div class="workshop-card">
+      <div class="workshop-card-image">
+        <img
+          src="{{ workshop.workshop_image }}"
+          alt="{{ workshop.workshop_name }}"
+        >
+      </div>
+      <div class="workshop-card-content">
+        <h3>{{ workshop.workshop_name }}</h3>
+        <table class="workshop-info">
+          <tr>
+            <td>Location:</td>
+            <td>{{ workshop.workshop_location }}</td>
+          </tr>
+          <tr>
+            <td>Dates:</td>
+            <td>
+              {{ workshop.workshop_start_date }}<br>
+              {{ workshop.workshop_end_date }}
+            </td>
+          </tr>
+          <tr>
+            <td>Times:</td>
+            <td>
+              {{ workshop.workshop_start_time }} <br>
+              {{ workshop.workshop_end_time }}
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+            <td class="align-center">Cost:</td>
+            <td><strong>$ {{ workshop.workshop_price }} USD</strong></td>
+          </tr>
+        </table>
+        <div class="buttons">
+          <a href="#0" class="primary-button">Register now</a>
+          <a
+            href="/workshops/{{ workshop.workshop_slug }}.html"
+            class="terciary-button"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  <div class="workshop-card next">
+    <div class="workshop-card-content">
+      <h3>Don't miss our next workshop</h3>
+      <p>Subscribe to our newsletter to receive news on our next worpshop:</p>
+      {% include 'newsletter-form.njk' %}
+    </div>
+  </div>
+</div>

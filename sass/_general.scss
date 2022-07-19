@@ -16,7 +16,7 @@ body.page-home {
 
 h1, h2, h3, h4 {
   font-family: $header-font-family;
-  line-height: 1.1;
+  line-height: 1;
   font-weight: 600;
 }
 
@@ -39,6 +39,18 @@ h4 {
 img {
   display: block;
   max-width: 100%;
+
+  &.content-image {
+    display: inline;
+  }
+  &.float-left {
+    float: left;
+    margin-right: 1rem;
+  }
+}
+
+strong {
+  font-weight: 700;
 }
 
 ul {
@@ -92,7 +104,7 @@ a {
   }
 }
 
-a.primary-button, a.secondary-button {
+a.primary-button, a.secondary-button, a.terciary-button {
   display: inline-block;
   padding: 0.5rem 3rem;
   border-radius: 2rem;
@@ -116,6 +128,17 @@ a.secondary-button {
   background-color: $secondary-color;
 }
 
+a.terciary-button {
+  background-color: transparent;
+  color: $primary-color;
+  text-decoration: underline;
+  border: none;
+}
+
 .mb1 {
   margin-bottom: 1rem;
+}
+
+.mt1 {
+  margin-top: 1rem;
 }
