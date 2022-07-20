@@ -56,6 +56,10 @@
   border-radius: 2rem;
   box-shadow: $box-shadow;
   overflow: hidden;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .workshop-card-image {
