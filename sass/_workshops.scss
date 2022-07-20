@@ -19,8 +19,12 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2vw;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+  @media screen and (max-width: 345px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .workshop-content-sidebar {
@@ -74,7 +78,7 @@
 }
 
 .workshop-card-content {
-  padding: 2rem 3rem;
+  padding: 2rem 2vw;
   padding-bottom: 4rem;
 }
 
