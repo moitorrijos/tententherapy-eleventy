@@ -16,13 +16,19 @@ title: Upcoming Workshops and Events | TenTenTherapy
   {% for workshop in workshops %}
     <div class="workshop-card">
       <div class="workshop-card-image">
-        <img
-          src="{{ workshop.workshop_image }}"
-          alt="{{ workshop.workshop_name }}"
-        >
+        <a href="/workshops/{{ workshop.workshop_slug }}.html">
+          <img
+            src="{{ workshop.workshop_image }}"
+            alt="{{ workshop.workshop_name }}"
+          >
+        </a>
       </div>
       <div class="workshop-card-content">
-        <h3>{{ workshop.workshop_name }}</h3>
+        <h3>
+          <a href="/workshops/{{ workshop.workshop_slug }}.html">
+            {{ workshop.workshop_name }}
+          </a>
+        </h3>
         <table class="workshop-info">
           <tr>
             <td>Location:</td>
@@ -51,7 +57,7 @@ title: Upcoming Workshops and Events | TenTenTherapy
           </tr>
         </table>
         <div class="buttons">
-          <a href="#0" class="primary-button">Register now</a>
+          <a href="/workshops/register" class="primary-button">Register now</a>
           <a
             href="/workshops/{{ workshop.workshop_slug }}.html"
             class="terciary-button"

@@ -1,0 +1,78 @@
+---
+layout: mainLayout
+title: TenTenTherapy Workshop Registration
+---
+<div class="container contact-us">
+  <div class="contact-us-form">
+    <h1>Register for</h1>
+    <h2>Intensive Workshop in Prolonged Exposure Therapy for Posttraumatic Stress Disorder (PTSD) at Casa de Salud</h2>
+    <p>
+      This workshop is for licensed mental health professionals (Social Workers, Psychologist, Professional Counselors, Marriage and Family Therapist) or those working under a licensed mental health professional. Because of the advanced nature of this workshop and the limited enrollment, participants should have prior experience treating trauma survivors.
+    </p>
+    <form
+      name="register-workshop-1"
+      data-netlify="true"
+      data-netlify-recaptcha="true"
+      netlify-honeypot="important-field"
+    >
+      <label for="your-name">
+        Your name
+        <input
+          type="text"
+          name="your-name"
+          id="your-name"
+          placeholder="Please type your full name."
+          required
+        >
+      </label>
+      <label for="your-profession">
+        Profession and degree: (e.g. Psychologist, Ph.D.; Social Work, LCSW)
+        <input
+          type="text"
+          name="your-profession"
+          id="your-profession"
+          placeholder="Please type your profession and degree."
+          required
+        >
+      </label>
+      <label for="your-email">
+        Your email
+        <input
+          type="email"
+          name="your-email"
+          id="your-email"
+          placeholder="Your email"
+          required
+        >
+      </label>
+      <label for="your-phone">
+        Your phone number
+        <div class="phone-picker">
+          <div class="int-phone-chooser">
+            <div class="flag-picker">
+              <img src="https://cdn.kcak11.com/CountryFlags/countries/us.svg" alt="United States">
+              <span>+1</span>
+            </div>
+          </div>
+          <input 
+            type="tel"
+            name="your-phone"
+            id="your-phone"
+            placeholder="(123) 456-7890"
+          >
+        </div>
+      </label>
+      
+      <label for="years" class="important-input">
+        How many years have you been speaking English?
+        <input type="text" name="important-field" id="years">
+      </label>
+      <label for="months" class="important-input">
+        How many months have you been speaking English?
+        <input type="text" name="important-field" id="months">
+      </label>
+      <div data-netlify-recaptcha="true" class="mb1"></div>
+      <button class="mb1" type="submit">Register</button>
+    </form>
+  </div>
+</div>
