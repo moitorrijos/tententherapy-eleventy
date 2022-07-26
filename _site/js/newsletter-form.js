@@ -1,11 +1,11 @@
-document.addEventListener('load', () => {
-  const registerForm = document.querySelector("#register-form")
-  if (registerForm) {
+window.addEventListener('load', () => {
+  const newsletterForm = document.querySelector("#newsletter-form")
+  if (newsletterForm) { 
     const handleSubmit = (event) => {
       event.preventDefault();
-      const formData = new FormData(registerForm);
-      const elements = registerForm.elements
-      fetch("/workshops/register", {
+      const formData = new FormData(newsletterForm);
+      const elements = newsletterForm.elements
+      fetch("/workshops", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
@@ -22,6 +22,6 @@ document.addEventListener('load', () => {
         })
         .catch((error) => alert(error));
     }
-    registerForm.addEventListener('submit', handleSubmit)
+    newsletterForm.addEventListener('submit', handleSubmit)
   }
 })

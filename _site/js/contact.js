@@ -14,12 +14,11 @@ window.addEventListener('load', () => {
         body: new URLSearchParams(formData).toString(),
       })
         .then(() => {
-          console.log("Form successfully submitted")
           submitButton.disabled = true;
           submitButton.innerContent = "Message Sent"
           submitButton.style.backgroundColor = "green"
           for (const element of elements) {
-            element.disabled = true;
+            element.disabled = true
           }
         })
         .catch((error) => alert(error));
