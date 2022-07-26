@@ -33,5 +33,11 @@ title: TenTenTherapy
   {% include 'footer.njk' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js"></script>
   <script src="{{ '/js/main.js' }}"></script>
+  {% if page.fileSlug == 'contact' %}
+    <script src="{{ '/js/contact.js' }}"></script>
+  {% endif %}
+  {% if page.fileSlug == 'register' %}
+    <script src="{{ '/js/register.js' }}"></script>
+  {% endif %}
 </body>
 </html>
