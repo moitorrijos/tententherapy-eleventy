@@ -3,11 +3,9 @@ window.addEventListener('load', () => {
   if (contactForm) {
     const handleSubmit = (event) => {
       event.preventDefault();
-      const years = contactForm.querySelector("input#years").value
-      const months = contactForm.querySelector("input#months").value
-      console.log(years, months)
-      if (years !== "" && months !== "") return
-      const formData = new FormData(contactForm);
+      const submitButton = document.querySelector("#submit-button")
+      const elements = contactForm.elements
+      const formData = new FormData(contactForm)
       fetch("/contact", {
         method: "POST",
         headers: {
@@ -15,7 +13,15 @@ window.addEventListener('load', () => {
         },
         body: new URLSearchParams(formData).toString(),
       })
-        .then(() => console.log("Form successfully submitted"))
+        .then(() => {
+          console.log("Form successfully submitted")
+          submitButton.disabled = true;
+          submitButton.innerContent = "Message Sent"
+          submitButton.style.backgroundColor = "green"
+          for (const element of elements) {
+            element.disabled = true;
+          }
+        })
         .catch((error) => alert(error));
     }
     contactForm.addEventListener('submit', handleSubmit)
