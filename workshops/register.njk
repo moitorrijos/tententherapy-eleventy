@@ -26,14 +26,15 @@ title: TenTenTherapy Workshop Registration
         >
       </label>
       <label for="your-profession">
-        Profession and degree: (e.g. Psychologist, Ph.D.; Social Worker, LCSW)
-        <input
-          type="text"
-          name="your-profession"
-          id="your-profession"
-          placeholder="Please type your profession and degree."
-          required
-        >
+        Profession and degree:
+        <select name="your-profession" id="your-profession">
+          <option disabled selected value>Please select</option>
+          <option value="Social Worker">Social Worker</option>
+          <option value="Psychologist">Psychologist</option>
+          <option value="Professional Counselor">Professional Counselor</option>
+          <option value="Marriage and Family Therapist">Marriage and Family Therapist</option>
+          <option value="Working under a licensed mental health professional">Working under a licensed mental health professional</option>
+        </select>
       </label>
       <p>
         All communication regarding the workshop will be done via email.<br>
@@ -68,7 +69,6 @@ title: TenTenTherapy Workshop Registration
           >
         </div>
       </label>
-      
       <label for="years" class="important-input">
         How many years have you been speaking English?
         <input type="text" name="important-field" id="years">

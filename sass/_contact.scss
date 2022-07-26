@@ -24,7 +24,7 @@
       margin-bottom: 0.5rem;
     }
 
-    input, textarea {
+    input, textarea, select {
       margin-top: 4px;
       border: 1px solid $medium-gray;
       border-radius: 4px;
@@ -38,6 +38,11 @@
 
     textarea {
       padding: 1rem;
+    }
+
+    select {
+      padding: 0.5rem 1rem;
+      color: inherit;
     }
 
     button {
