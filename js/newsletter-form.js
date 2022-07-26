@@ -3,7 +3,8 @@ window.addEventListener('load', () => {
   if (newsletterForm) { 
     const handleSubmit = (event) => {
       event.preventDefault();
-      const formData = new FormData(newsletterForm);
+      const formData = new FormData(newsletterForm)
+      const submitButton = document.querySelector("#submit-button")
       const elements = newsletterForm.elements
       fetch("/workshops", {
         method: "POST",
