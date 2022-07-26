@@ -4,6 +4,7 @@ document.addEventListener('load', () => {
     const handleSubmit = (event) => {
       event.preventDefault();
       const formData = new FormData(registerForm);
+      const elements = registerForm.elements
       fetch("/workshops/register", {
         method: "POST",
         headers: {
@@ -11,7 +12,14 @@ document.addEventListener('load', () => {
         },
         body: new URLSearchParams(formData).toString(),
       })
-        .then(() => console.log("Form successfully submitted"))
+        .then(() => {
+          submitButton.disabled = true;
+          submitButton.innerContent = "Message Sent"
+          submitButton.style.backgroundColor = "green"
+          for (const element of elements) {
+            element.disabled = true
+          }
+        })
         .catch((error) => alert(error));
     }
     registerForm.addEventListener('submit', handleSubmit)
