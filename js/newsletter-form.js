@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
   if (newsletterForm) { 
     const handleSubmit = (event) => {
       event.preventDefault();
+      const fetchUrl('https://n8n.cotiza.me/webhook-test/d413a8a3-689f-4e2e-91fd-09768995023e')
       const formData = new FormData(newsletterForm)
       const submitButton = document.querySelector("#submit-button")
       const elements = newsletterForm.elements
